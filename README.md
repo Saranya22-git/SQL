@@ -45,11 +45,14 @@ Hey everybody!!!
     - Must be unique
     - Cannot be NULL
     - Only one primary key per table
-**Example:** ```CREATE TABLE student_details 
+**Example:** 
+```sql
+CREATE TABLE student_details 
                     (
                     id INT PRIMARY KEY, 
                     name VARCHAR(20)
-                    );```
+                    );
+```
 
 **Foreign Key:** *A foreign key is a columns that creates a realtionship between tewo tables. It refers to the primary key of another table.*
 **Example:**   
