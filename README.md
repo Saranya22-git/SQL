@@ -30,7 +30,13 @@ Hey everybody!!!
   - [**TRUNCATE**](#truncate)
   - [**DROP**](#drop)
 - [**DML**](#dml)
+  - [**INSERT**](#insert)
+  - [**UPDATE**](#update)
+  - [**DELETE**](#delete)
 - [**DQL**](#dql)
+  - [**SELECT**](#select)
+  - [**WHERE**](#where)
+  - [**DISTINCT**](#distinct)
 - [**TCL**](#tcl)
 - [**DCL**](#dcl)
 
@@ -216,8 +222,95 @@ DROP TABLE student_details;
 ```
 
 #### **DML**
+*DML stands for Data Manipulation Language. DML commands are used to insert, update or delete data inside tables.*
+
+##### **INSERT**
+*Used to add new records in a table. Insert is used for adding new data.*
+```sql
+-- Syntax for Inserting one row of values
+INSERT INTO table_name(column1,column2)
+VALUES (value1,value2);
+
+-- Example: INSERT INTO student_details(id,name)
+VALUES (1, "saran");
+
+-- Syntax for Inserting multiple rows of values
+INSERT INTO table_name
+VALUES (value1, value2,....),
+       (value11, value12,..),
+       .
+       .
+       (value n,....);
+```
+
+##### **UPDATE**
+*Used to modify existing data.
+Without WHERE it updates all rows.*
+```sql
+-- Syntax
+UPDATE table_name
+SET column1=value1
+WHERE condition;
+
+-- Example
+UPDATE student_details
+SET id=1
+WHERE name="saran";
+```
+##### **DELETE**
+*Used to remove specific records from a table.*
+```sql
+-- Syntax
+DELETE FROM table_name
+WHERE condition;
+
+-- Example
+DELETE FROM student_details
+WHERE id=1;
+```
 
 #### **DQL**
+*DQL stands for Data Query Language. DQL is used to retrieve(fetch) data from the database.*
+
+##### **SELECT**
+*Used to fetch data from a table.*
+```sql
+-- Syntax for to fetch data from a table
+SELECT * FROM table_name; 
+
+-- Example
+SELECT * FROM student_details;
+
+-- Syntax for to fetch only those specific columns
+SELECT column1, column2
+FROM table_name;
+
+-- Example
+SELECT id, name
+FROM student_details;
+```
+##### **WHERE**
+*Used to filter records based on condition.*
+```sql
+-- Syntax
+SELECT * FROM table_name
+WHERE condition;
+
+-- Example
+SELECT * FROM student_details
+WHERE id=1;
+```
+##### **DISTINCT**
+*Used to remove duplicate values.*
+```sql
+-- Syntax
+SELECT DISTINCT column_name
+FROM table_name;
+
+-- Example
+SELECT DISTINCT id
+FROM student_details;
+```
 
 #### **TCL**
 
