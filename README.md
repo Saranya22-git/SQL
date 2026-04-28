@@ -9,8 +9,8 @@ Hey everybody!!!
 - [**Database**](#database)
 - [**Why do we need database?**](#why-do-we-need-database)
 - [**Types of Databases:**](#types-of-databases)
-  - [**Relational Database (RDBMS):**](#relational-database-rdbms)
-  - [**Non-Relational database (No SQL):**](#non-relational-database-no-sql)
+  - [**🔹Relational Database (RDBMS):**](#relational-database-rdbms)
+  - [**🔹Non-Relational database (No SQL):**](#non-relational-database-no-sql)
 - [**What is SQL?**](#what-is-sql)
 - [**DBMS** vs **RDMS**](#dbms-vs-rdms)
 - [**Table**](#table)
@@ -49,20 +49,20 @@ Hey everybody!!!
 **Example for database:** *College stores student details, marks, attendance. All this is stored in a database.*
 
 #### **Why do we need database?**
-***Without database:*** *Data is stored in files, difficult to search, data duplication, no security with database.*
+**🔹*Without database:*** *Data is stored in files, difficult to search, data duplication, no security with database.*
 
-***With database:*** *Fast retrieval (getting something), Organized data, Secure, Multi-user access.*
+**🔹*With database:*** *Fast retrieval (getting something), Organized data, Secure, Multi-user access.*
 
 #### **Types of Databases:**
 
-##### **Relational Database (RDBMS):** 
+##### **🔹Relational Database (RDBMS):** 
 *Data is stored in tables (rows & columns)*
    **Example:** *MySQL, PostgreSQL, Oracle database.*
   |   ID   |  Name  |  Marks  |
   |--------|--------|---------|
   |    1   |  Sara  |   89    |
 
-##### **Non-Relational database (No SQL):** 
+##### **🔹Non-Relational database (No SQL):** 
 *Data is stored in JSON, documents, key-value pairs.*
 **Example:** *MongoDB*
 ```json
