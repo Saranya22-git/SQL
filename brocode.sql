@@ -77,5 +77,32 @@ WHERE stu_cgpa IS NULL;
 SELECT * FROM stud_details
 WHERE stu_cgpa IS NOT NULL;
 
+-- Update specific column
+UPDATE stud_details
+SET stu_cgpa=8.9
+WHERE stu_id=4;
+SELECT * FROM stud_details;
+
+-- Update multiple columns
+UPDATE stud_details
+SET stu_branch="BCOM",
+    stu_address="vijw"
+WHERE stu_id=4;
+SELECT * FROM stud_details;
+
+-- If we want to update all of the column
+UPDATE stud_details
+SET stu_address="vijw";
+SELECT * FROM stud_details;
+
+-- Delete all rows from a table
+DELETE FROM stud_details;
+
+-- If we want to delete specific row from a table
+DELETE FROM stud_details
+WHERE stu_id=4;
+
+-- AUTOCOMMIT
+
 -- Dropping the table
 DROP TABLE stu_details;
