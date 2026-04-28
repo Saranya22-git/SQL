@@ -105,7 +105,7 @@ CREATE TABLE student_details
                     );
 ```
 #### **Foreign Key**
-**Foreign Key:** *A foreign key is a columns that creates a realtionship between tewo tables. It refers to the primary key of another table.*
+**Foreign Key:** *A foreign key is a columns that creates a realtionship between two tables. It refers to the primary key of another table.*
 **Example:**   
 ```sql
             -- TABLE-1
@@ -122,10 +122,10 @@ CREATE TABLE student_details
             );
 ```
 #### **Constraints**
-**Constraints:** *Constraints are rules applied to columns to maintain data accuracy and integrity.*
+*Constraints are rules applied to columns to maintain data accuracy and integrity.*
 
 ##### **NOT NULL** 
-    *Ensures column cannot have NULL values.*
+*Ensures column cannot have NULL values.*
   ```sql
         CREATE TABLE student_details(
             id INT,
@@ -133,7 +133,7 @@ CREATE TABLE student_details
         );
   ```
 ##### **UNIQUE** 
-    *Ensures all values in a column are different.*
+*Ensures all values in a column are different.*
  ```sql
         CREATE TABLE student_details (
             id INT UNIQUE,
@@ -141,14 +141,14 @@ CREATE TABLE student_details
         );
  ```
 ##### **CHECK** 
-    *Ensures values meet a condition.*
+*Ensures values meet a condition.*
  ```sql
         CREATE TABLE student_details (
             age INT CHECK (age>=18)
         );
  ```
 ##### **DEFAULT** 
-    *Assigns default value if none provided.*
+*Assigns default value if none provided.*
  ```sql
         CREATE TABLE student_details (
             location VARCHAR(50) DEFAULT 'HYD'
