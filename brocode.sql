@@ -102,7 +102,12 @@ DELETE FROM stud_details;
 DELETE FROM stud_details
 WHERE stu_id=4;
 
--- AUTOCOMMIT
+-- AUTOCOMMIT, COMMIT, ROLLBACK
+SET AUTOCOMMIT=OFF;
+COMMIT;
+ROLLBACK;
 
 -- Dropping the table
 DROP TABLE stu_details;
+
+DROP TABLE stud_details;
