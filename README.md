@@ -38,7 +38,12 @@ Hey everybody!!!
   - [**WHERE**](#where)
   - [**DISTINCT**](#distinct)
 - [**TCL**](#tcl)
+  - [**COMMIT**](#commit)
+  - [**ROLLBACK**](#rollback)
+  - [**SAVEPOINT**](#savepoint)
 - [**DCL**](#dcl)
+  - [**GRANT**](#grant)
+  - [**REVOKE**](#revoke)
 
 #### **Data**
 
@@ -164,7 +169,7 @@ CREATE TABLE student_details
  - *DCL - GRANT, REVOKE*
 
 #### **DDL** 
-*DDL stands for Data Definition Language. DDL commands are used to create, modify or delete the structure of database objects (like tables).*
+*DDL stands for Data Definition Language. DDL commands are used to create, modify or delete the structure of database objects (like tables). Basically DDL = Structure (Table design).*
 
 ##### **CREATE**
 *Used to CREATE a new table or database.*
@@ -201,6 +206,14 @@ MODIFY column_name datatype;
 -- Example
 ALTER TABLE student_details
 MODIFY name VRACHAR(100);
+
+-- Syntax for DROP COLUMN
+ALTER TABLE table_name
+DROP COLUMN column_name
+
+-- Example
+ALTER TABLE student_details
+DROP COLUMN loc;
 ```
 ##### **TRUNCATE**
 *Used to remove all data from a table but keep structure.*
@@ -212,7 +225,7 @@ TRUNCATE TABLE table_name;
 TRUNCATE TABLE student_details;
 ```
 ##### **DROP**
-*Used to delete the entire table(structure + data).*
+*Used to delete table completely(structure + data).*
 ```sql
 -- Syntax
 DROP TABLE table_name;
@@ -222,7 +235,7 @@ DROP TABLE student_details;
 ```
 
 #### **DML**
-*DML stands for Data Manipulation Language. DML commands are used to insert, update or delete data inside tables.*
+*DML stands for Data Manipulation Language. DML commands are used to insert, update or delete data inside tables. Basically DDL = Data Operations.*
 
 ##### **INSERT**
 *Used to add new records in a table. Insert is used for adding new data.*
@@ -260,17 +273,23 @@ WHERE name="saran";
 ##### **DELETE**
 *Used to remove specific records from a table.*
 ```sql
--- Syntax
+-- Syntax for deleting specific rows from a table
 DELETE FROM table_name
 WHERE condition;
 
 -- Example
 DELETE FROM student_details
 WHERE id=1;
+
+-- Syntax for deleting all rows in a table
+DELETE FROM table_name;
+
+-- Example
+DELETE FROM student_details;
 ```
 
 #### **DQL**
-*DQL stands for Data Query Language. DQL is used to retrieve(fetch) data from the database.*
+*DQL stands for Data Query Language. DQL is used to retrieve(fetch) data from the database. Basically DQL = Get data.*
 
 ##### **SELECT**
 *Used to fetch data from a table.*
@@ -313,9 +332,64 @@ FROM student_details;
 ```
 
 #### **TCL**
+*TCL stands for Transaction Control Lnaguage. TCL commands are used to manage transactions(group of queries). Basically TCL = Save or undo.*
 
+##### **COMMIT**
+*Saves changes permanently.*
+```sql
+-- Syntax
+COMMIT;
+
+-- Example
+SELECT * FROM student_details;
+COMMIT;
+```
+##### **ROLLBACK**
+*Undo changes.*
+```sql
+-- Syntax 
+ROLLBACK;
+
+-- Example
+SELECT * FROM student_details;
+ROLLBACK;
+```
+##### **SAVEPOINT**
+*Creates checkpoint.*
+```sql
+-- Syntax
+SAVEPOINT table_name
+ROLLBACK TO table_name;
+
+-- Example
+SAVEPOINT s1;
+SELECT * FROM student_details;
+ROLLBACK TO s1;
+```
 #### **DCL**
+*DCL stands for Data Control Language. Used to control user permissions. Basically DCL = Security.*
+
+##### **GRANT**
+*Gives access.*
+```sql
+-- Syntax
+GRANT privilege
+ON table_name
+TO user_name;
+
+-- Example
+GRANT SELECT ON student_details TO user1;
+```
+##### **REVOKE**
+*Removes access.*
+```sql
+-- Syntax
+REVOKE privilege
+ON table_name
+TO user_name;
+
+-- Example
+REVOKE SELECT ON student_details TO user1;
+```
 
 
-
- is null, is not null
