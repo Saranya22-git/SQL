@@ -51,6 +51,9 @@ Hey everybody!!!
   - [**NOT Operator**](#not-operator)
   - [**BETWEEN**](#between)
   - [**IN Operator**](#in-operator)
+  - [**LIKE**](#like)
+  - [**IS NULL**](#is-null)
+  - [**IS NOT NULL**](#is-not-null)
 
 #### **Data**
 
@@ -449,7 +452,7 @@ WHERE NOT marks>80;
 ```
 
 ##### **BETWEEN**
-***BETWEEN** is used to filter a range of values(inclusive).*
+***BETWEEN** is used to filter a range of values(inclusive). We cannot use OR by BETWEEN.*
 ```sql
 -- Syntax
 SELECT * FROM table_name
@@ -462,5 +465,59 @@ WHERE marks BETWEEN 60 AND 80;
 
 ##### **IN Operator**
 ***IN** is used to match multiple values.*
+```sql
+-- Syntax
+SELECT * FROM table_name
+WHERE column IN (value1, value2, value3);
 
+-- Example
+SELECT * FROM student_details
+WHERE name IN("Sara","Tej");
+```
+
+##### **LIKE**
+***LIKE** is used to search patterns in text.*
+*Symbols Used:*
+"%" Any number of characters.
+"-" Single character.
+```sql
+SELECT * FROM table_name
+WHERE column LIKE pattern.
+
+-- Example
+-- Starts with
+SELECT *  FROM student_details
+WHERE stu_name LIKE 'S%';
+
+-- Ends with
+SELECT * FROM student_details
+WHERE stu_name LIKE '%U';
+
+-- Contains
+SELECT * FROM student_details
+WHERE stu_name LIKE '%e%';
+
+-- Exactly 4 letters
+SELECT * FROM student_details
+WHERE stu_name LIKE '____';
+```
+
+##### **IS NULL**
+*Used to check missing **(NULL)** values. NULL means No values.*
+```sql
+-- Syntax
+SELECT * FROM table_name
+WHERE column IS NULL;
+```
+
+##### **IS NOT NULL**
+*Used to check non missing **(NOT NULL)** values.*
+```sql
+-- Syntax
+SELECT * FROM table_name
+WHERE column IS NOT NULL;
+```
+
+
+  
 

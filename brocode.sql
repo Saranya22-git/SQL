@@ -133,3 +133,26 @@ WHERE NOT stu_id=1;
 -- BETWEEN
 SELECT * FROM stud_details
 WHERE stu_cgpa BETWEEN 9.5 OR 9.9;
+
+-- IN Operator
+SELECT * FROM stud_details
+WHERE stu_name IN ("Saran","Addu");
+
+-- LIKE
+
+-- Starts with
+SELECT *  FROM stud_details
+WHERE stu_name LIKE 'S%';
+
+-- Ends with
+SELECT * FROM stud_details
+WHERE stu_name LIKE '%U';
+
+-- Contains
+SELECT * FROM stud_details
+WHERE stu_name LIKE '%e%';
+
+-- Exactly 4 letters
+SELECT * FROM stud_details
+WHERE stu_name LIKE '____';
+
