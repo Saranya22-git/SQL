@@ -156,3 +156,29 @@ WHERE stu_name LIKE '%e%';
 SELECT * FROM stud_details
 WHERE stu_name LIKE '____';
 
+-- Sorting data
+
+-- ORDER BY
+SELECT stu_cgpa
+FROM stud_details
+ORDER BY stu_cgpa ASC;
+
+SELECT stu_branch
+FROM stud_details
+ORDER BY stu_cgpa ASC;
+
+SELECT stu_name,stu_branch
+FROM stud_details
+ORDER BY stu_name,stu_branch ASC;
+
+SELECT * FROM stud_details
+ORDER BY stu_name,stu_branch ASC;
+
+-- Using ORDER BY with WHERE
+SELECT * FROM stud_details
+WHERE stu_cgpa>9
+ORDER BY stu_name ASC;
+
+-- Using column position
+SELECT stu_cgpa, stu_name FROM stud_details
+ORDER BY 3 ASC;

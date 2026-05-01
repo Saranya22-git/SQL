@@ -54,6 +54,11 @@ Hey everybody!!!
   - [**LIKE**](#like)
   - [**IS NULL**](#is-null)
   - [**IS NOT NULL**](#is-not-null)
+- [**Sorting Data**](#sorting-data)
+  - [**ORDER BY Clause**](#order-by-clause)
+  - [**Using ORDER BY with WHERE**](#using-order-by-with-where)
+  - [**Using ORDER BY with column position**](#using-order-by-with-column-position)
+- [**Aggregate Functions**](#aggregate-functions)
 
 #### **Data**
 
@@ -508,6 +513,10 @@ WHERE stu_name LIKE '____';
 -- Syntax
 SELECT * FROM table_name
 WHERE column IS NULL;
+
+-- Example
+SELECT * FROM student_details
+WHERE marks IS NULL;
 ```
 
 ##### **IS NOT NULL**
@@ -516,7 +525,64 @@ WHERE column IS NULL;
 -- Syntax
 SELECT * FROM table_name
 WHERE column IS NOT NULL;
+
+-- Example
+SELECT * FROM student_details
+WHERE marks IS NOT NULL;
 ```
+
+#### **Sorting Data**
+*Sorting means arranging data in a specific order.*
+
+##### **ORDER BY Clause**
+***ORDER BY** is used to sort the result set based on one or more columns. Basically, ORDER BY = arrange data in ascending/descending.*
+```sql
+-- Syntax for sorting single column or specific columns
+SELECT column_name
+FROM table_name
+ORDER BY column_name ASC|DESC;
+
+-- Example
+SELECT stu_cgpa
+FROM stud_details
+ORDER BY stu_cgpa ASC;
+
+SELECT stu_name,stu_branch
+FROM stud_details
+ORDER BY stu_name,stu_branch ASC;
+
+-- Syntax for sorting mupltiple columns
+SELECT * FROM table_name
+ORDER BY coulmn1 ASC, column2 DESC;
+
+-- Example
+SELECT * FROM stud_details
+ORDER BY stu_name,stu_branch ASC;
+```
+
+##### **Using ORDER BY with WHERE**
+*Filter data then sort it.*
+```sql
+-- Syntax
+SELECT * FROM table_name
+WHERE condition
+ORDER BY column_name ASC|DESC;
+
+-- Example
+SELECT * FROM stud_details
+WHERE stu_cgpa>9
+ORDER BY stu_name ASC;
+```
+
+##### **Using ORDER BY with column position**
+```sql
+SELECT stu_cgpa, stu_name FROM stud_details
+ORDER BY 3 ASC;
+```
+
+#### **Aggregate Functions**
+**
+
 
 
   
