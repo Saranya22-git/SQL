@@ -211,3 +211,43 @@ WHERE stu_id>=2;
 -- Aggregate ignores NULL values
 
 -- Aggregate returns ONE value
+
+-- GROUP BY
+SELECT stu_name, MAX(stu_cgpa)
+FROM stud_details
+GROUP BY stu_name;
+
+-- ADDING MORE COLUMNS
+ALTER TABLE stud_details
+ADD my_date DATE,  ADD my_time TIME, ADD my_datetime DATETIME;
+
+-- Inserting values
+INSERT INTO stud_details(my_date, my_time, my_datetime)
+VALUES(CURRENT_DATE(),CURRENT_TIME(),NOW());
+
+-- Update
+UPDATE stud_details
+SET my_date=CURRENT_DATE(),
+    my_time=CURRENT_TIME(),
+    my_datetime=NOW();
+
+UPDATE stud_details
+SET my_date=CURRENT_DATE()+1
+WHERE stu_id=2;
+
+UPDATE stud_details
+SET my_date=CURRENT_DATE()-1
+WHERE stu_id=1;
+
+-- Delete
+DELETE FROM stud_details
+WHERE stu_id IS NULL;
+
+-- ALTER CONSTRAINT
+-- ADD CONSTRAINT is used for things like: PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK
+
+ALTER TABLE stud_details
+ADD CONSTRAINT
+NOT NULL(my_date);
+
+SELECT * FROM stud_details;

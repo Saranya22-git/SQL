@@ -67,6 +67,9 @@ Hey everybody!!!
   - [**Aggregate + WHERE**](#aggregate--where)
   - [*Aggregate ignores NULL values.*](#aggregate-ignores-null-values)
   - [*Aggregate returns ONE value.*](#aggregate-returns-one-value)
+- [**GROUP BY \& HAVING**](#group-by--having)
+  - [**GROUP BY**](#group-by)
+  - [**HAVING Clause**](#having-clause)
 
 #### **Data**
 
@@ -667,6 +670,26 @@ WHERE condition;
 
 ##### *Aggregate returns ONE value.*
 
+#### **GROUP BY & HAVING**
+
+##### **GROUP BY**
+***GROUP BY** is used to group rows that have the same values into categories, so we can apply aggregate functions on each group. Basically GROUP BY = divide data into groups.*
+```sql
+-- Syntax
+SELECT column_name, AGG_FUNCTION(column)
+FROM table_name
+GROUP BY column_name;
+
+-- Example
+SELECT stu_name, MAX(stu_cgpa)
+FROM stud_details
+GROUP BY stu_name;
+```
+
+##### **HAVING Clause**
+***HAVING** is used to filter grouped data(after GROUP BY). Basically, HAVING = filter groups.*
+
+ 
 
 
   
