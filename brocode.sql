@@ -182,3 +182,32 @@ ORDER BY stu_name ASC;
 -- Using column position
 SELECT stu_cgpa, stu_name FROM stud_details
 ORDER BY 3 ASC;
+
+-- Aggregate Functions
+
+-- COUNT()
+SELECT COUNT(*) FROM stud_details;
+
+-- COUNT specific column (non-null values)
+SELECT COUNT(stu_id) FROM stud_details;
+
+-- SUM()
+SELECT SUM(stu_cgpa) FROM stud_details;
+
+-- AVG()
+SELECT AVG(stu_cgpa) FROM stud_details;
+
+-- MIN()
+SELECT MIN(stu_cgpa) FROM stud_details;
+
+-- MAX()
+SELECT MAX(stu_cgpa) FROM stud_details;
+
+-- Aggregate + WHERE
+SELECT COUNT(*)
+FROM stud_details
+WHERE stu_id>=2;
+
+-- Aggregate ignores NULL values
+
+-- Aggregate returns ONE value

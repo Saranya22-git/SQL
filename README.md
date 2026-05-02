@@ -59,6 +59,14 @@ Hey everybody!!!
   - [**Using ORDER BY with WHERE**](#using-order-by-with-where)
   - [**Using ORDER BY with column position**](#using-order-by-with-column-position)
 - [**Aggregate Functions**](#aggregate-functions)
+  - [**COUNT()**](#count)
+  - [**SUM()**](#sum)
+  - [**AVG()**](#avg)
+  - [**MIN()**](#min)
+  - [**MAX()**](#max)
+  - [**Aggregate + WHERE**](#aggregate--where)
+  - [*Aggregate ignores NULL values.*](#aggregate-ignores-null-values)
+  - [*Aggregate returns ONE value.*](#aggregate-returns-one-value)
 
 #### **Data**
 
@@ -581,7 +589,83 @@ ORDER BY 3 ASC;
 ```
 
 #### **Aggregate Functions**
-**
+*Aggregate Functions are used to perform calculations on multiple rows and return a single value. Basically, Many rows - One result.*
+
+##### **COUNT()**
+*Counts number of rows.*
+```sql
+-- Syntax
+SELECT COUNT(column_name)
+FROM table_name;
+
+-- Example
+SELECT COUNT(*) FROM stud_details;
+
+-- Syntax for Count specific column(non-null values)
+SELECT COUNT(column_name) FROM table_name;
+
+-- Example
+SELECT COUNT(stu_id) FROM stud_details;
+```
+
+##### **SUM()**
+*Calculates total sum of column.*
+```sql
+-- Syntax
+SELECT SUM(column_name)
+FROM table_name;
+
+-- Example
+SELECT SUM(stu_cgpa)
+FROM stud_details;
+```
+
+##### **AVG()**
+*Calculates average value.*
+```sql
+-- Syntax
+SELECT AVG(column_name)
+FROM table_name;
+
+-- Example
+SELECT AVG(stu_cgpa) FROM stud_details;
+```
+
+##### **MIN()**
+*Finds smallest value.*
+```sql
+-- Syntax
+SELECT MIN(column_name)
+FROM table_name;
+
+-- Example
+SELECT MIN(stu_id)
+FROM stud_details;
+```
+
+##### **MAX()**
+*Finds largest value.*
+```sql
+-- Syntax
+SELECT MAX(column_name)
+FROM table_name;
+
+-- Example
+SELECT MAX(stu_id) 
+FROM stud_details;
+```
+
+##### **Aggregate + WHERE**
+*Counts only filtered data.*
+```sql
+SELECT COUNT(*)
+FROM table_name
+WHERE condition;
+```
+
+##### *Aggregate ignores NULL values.*
+
+##### *Aggregate returns ONE value.*
 
 
 
