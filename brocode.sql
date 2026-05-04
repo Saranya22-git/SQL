@@ -251,3 +251,40 @@ ADD CONSTRAINT
 NOT NULL(my_date);
 
 SELECT * FROM stud_details;
+
+-- Foreign Key
+
+CREATE TABLE customers(
+    customer_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50)
+);
+
+SELECT * FROM customers;
+
+DROP TABLE customers;
+
+CREATE TABLE transactions(
+    transaction_id INT PRIMARY KEY AUTO_INCREMENT,
+    amount DECIMAL (5,2),
+    customer_id INT,
+    FOREIGN KEY(customer_id) REFERENCES customers(customer_id)
+);
+
+SELECT * FROM transactions;
+
+DROP TABLE transactions;
+
+-- Another example with foreign key
+
+CREATE TABLE college(
+    branch_id INT PRIMARY KEY AUTO_INCREMENT,
+    branch_name VARCHAR(20)
+);
+
+CREATE TABLE student_std(
+    student_id INT PRIMARY KEY AUTO_INCREMENT,
+    stu_cgpa INT,
+    branch_id INT,
+    FOREIGN KEY(branch_id) REFERENCES college(branch_id)
+);

@@ -70,6 +70,7 @@ Hey everybody!!!
 - [**GROUP BY \& HAVING**](#group-by--having)
   - [**GROUP BY**](#group-by)
   - [**HAVING Clause**](#having-clause)
+- [**JOINS**](#joins)
 
 #### **Data**
 
@@ -690,6 +691,7 @@ GROUP BY stu_name;
 ***HAVING** is used to filter grouped data(after GROUP BY). Basically, HAVING = filter groups.*
 
  
+#### **JOINS**
 
 
   
