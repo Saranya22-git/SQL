@@ -71,6 +71,7 @@ Hey everybody!!!
   - [**GROUP BY**](#group-by)
   - [**HAVING Clause**](#having-clause)
 - [**JOINS**](#joins)
+  - [**Types of Joins**](#types-of-joins)
 
 #### **Data**
 
@@ -677,21 +678,45 @@ WHERE condition;
 ***GROUP BY** is used to group rows that have the same values into categories, so we can apply aggregate functions on each group. Basically GROUP BY = divide data into groups.*
 ```sql
 -- Syntax
-SELECT column_name, AGG_FUNCTION(column)
+SELECT AGG_FUNCTION(column), column_name
 FROM table_name
 GROUP BY column_name;
 
 -- Example
-SELECT stu_name, MAX(stu_cgpa)
+SELECT MAX(stu_cgpa), stu_branch
 FROM stud_details
-GROUP BY stu_name;
+GROUP BY stu_branch;
 ```
 
 ##### **HAVING Clause**
 ***HAVING** is used to filter grouped data(after GROUP BY). Basically, HAVING = filter groups.*
+```sql
+SELECT MAX(stu_cgpa), stu_branch
+FROM stud_details
+GROUP BY stu_branch
+HAVING MAX(stu_cgpa)>=9;
+```
 
+```sql
+SQL has a fixed order:
+ SELECT 
+ FROM
+ WHERE
+ GROUP BY
+ HAVING
+ ORDER BY
+```
  
 #### **JOINS**
+*A **JOIN** is used to combine data from two or more tables based on a related column. Basically JOIN = combine tables using a common column.*
+
+##### **Types of Joins**
+- **INNER JOIN**
+- **LEFT JOIN**
+- **RIGHT JOIN**
+- **FULL JOIN**
+- **CROSS JOIN**
+- **SELF JOIN**
 
 
   

@@ -43,6 +43,9 @@ INSERT INTO stud_details
 VALUES (2,"addu","ECE",9.90,"Vijw"),
 (3,"tej","IT",9.0,"Hyd");
 
+INSERT INTO stud_details(stu_id,stu_name,stu_branch,stu_cgpa,stu_address)
+VALUES(5,"shri","AIDS",8.9,"vijw");
+
 -- Inserting just specific column values
 INSERT INTO stud_details(stu_id,stu_name)
 VALUES (4,"mohi");
@@ -213,9 +216,38 @@ WHERE stu_id>=2;
 -- Aggregate returns ONE value
 
 -- GROUP BY
-SELECT stu_name, MAX(stu_cgpa)
+SELECT MAX(stu_cgpa), stu_branch
 FROM stud_details
-GROUP BY stu_name;
+GROUP BY stu_branch;
+
+SELECT MIN(stu_cgpa), stu_name
+FROM stud_details
+GROUP BY stu_cgpa;
+
+SELECT MAX(stu_cgpa), stu_branch
+FROM stud_details
+WHERE (stu_cgpa)>=9
+GROUP BY stu_branch;
+
+SELECT MAX(stu_cgpa), stu_branch
+FROM stud_details
+GROUP BY stu_branch;
+
+-- HAVING 
+SELECT MAX(stu_cgpa), stu_branch
+FROM stud_details
+GROUP BY stu_branch
+HAVING MAX(stu_cgpa)>=9;
+
+``sql
+SQL has a fixed order:
+ SELECT 
+ FROM
+ WHERE
+ GROUP BY
+ HAVING
+ ORDER BY
+``
 
 -- ADDING MORE COLUMNS
 ALTER TABLE stud_details
@@ -288,3 +320,57 @@ CREATE TABLE student_std(
     branch_id INT,
     FOREIGN KEY(branch_id) REFERENCES college(branch_id)
 );
+
+-- Another table
+CREATE TABLE grocery(
+    grocery_id INT PRIMARY KEY AUTO_INCREMENT,
+    grocery_name VARCHAR(50)
+);
+
+CREATE TABLE grocery_transaction(
+    grocery_amount INT,
+    grocery_price DECIMAL(5,2),
+    grocery_id INT,
+    FOREIGN KEY (grocery_id) REFERENCES grocery(grocery_id)
+);
+
+INSERT INTO grocery(grocery_name)
+VALUES  ("Bread"),
+        ("Milk"),
+        ("Lays"),
+        ("Biscuits");
+
+SELECT * FROM grocery;
+
+INSERT INTO grocery_transaction(grocery_amount,grocery_price,grocery_id)
+VALUES  (30,30.003,1),
+        (50,50.009,2),
+        (10,10.00,3),
+        (100,100.10,4),
+        (50,35.003,1);
+
+INSERT INTO grocery(grocery_name)
+VALUES("Chocolates");
+
+SELECT * FROM grocery_transaction;
+
+DROP TABLE grocery_transaction;
+
+-- Joins
+-- INNER JOINS
+SELECT * FROM grocery
+INNER JOIN grocery_transaction 
+ON grocery.grocery_id=grocery_transaction.grocery_id;
+
+SELECT * FROM grocery_transaction
+INNER JOIN grocery 
+ON grocery_transaction.grocery_id=grocery.grocery_id;
+
+SELECT grocery_name,grocery_amount FROM grocery
+INNER JOIN grocery_transaction 
+ON grocery.grocery_id=grocery_transaction.grocery_id;
+
+-- LEFT JOIN
+SELECT grocery_name,grocery_amount FROM grocery
+LEFT JOIN grocery_transaction 
+ON grocery.grocery_id=grocery_transaction.grocery_id;
