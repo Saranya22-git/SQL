@@ -712,9 +712,53 @@ SQL has a fixed order:
 
 ##### **Types of Joins**
 - **INNER JOIN**
+  *Returns only matching records in both tables.*
+  ```sql
+  -- Syntax for specific columns
+  SELECT columns
+  FROM table1
+  INNER JOIN table2
+  ON table1.column=table2.column;
+
+  --Example
+  SELECT grocery_name,grocery_amount FROM grocery
+  INNER JOIN grocery_transaction 
+  ON grocery.grocery_id=grocery_transaction.grocery_id;
+  ```
+
 - **LEFT JOIN**
+  *Returns all records from left table + matching from right.*
+  ```sql
+  -- Syntax
+  SELECT columns
+  FROM table1
+  LEFT JOIN table2
+  ON table1.column=table2.column;
+
+  -- Example
+  SELECT grocery_name,grocery_amount FROM grocery
+  LEFT JOIN grocery_transaction 
+  ON grocery.grocery_id=grocery_transaction.grocery_id;
+  ```
+
 - **RIGHT JOIN**
+  *Returns all records from right table + matching from left.*
+  ```sql
+  -- Syntax
+  SELECT columns
+  FROM table1
+  RIGHT JOIN table2
+  ON table1.column=table2.column;
+
+  -- Example
+  SELECT grocery_name,grocery_amount FROM grocery
+  RIGHT JOIN grocery_transaction 
+  ON grocery.grocery_id=grocery_transaction.grocery_id;
+  ```
+
 - **FULL JOIN**
+  *Returns all records from both sides.*
+  
 - **CROSS JOIN**
 - **SELF JOIN**
 

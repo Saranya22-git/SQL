@@ -374,3 +374,8 @@ ON grocery.grocery_id=grocery_transaction.grocery_id;
 SELECT grocery_name,grocery_amount FROM grocery
 LEFT JOIN grocery_transaction 
 ON grocery.grocery_id=grocery_transaction.grocery_id;
+
+-- RIGHT JOIN
+SELECT grocery_name,grocery_amount FROM grocery
+RIGHT JOIN grocery_transaction 
+ON grocery.grocery_id=grocery_transaction.grocery_id;
