@@ -211,11 +211,19 @@ SELECT COUNT(*)
 FROM stud_details
 WHERE stu_id>=2;
 
+SELECT COUNT(stu_cgpa)
+FROM stud_details
+WHERE stu_cgpa>=9;
+
 -- Aggregate ignores NULL values
 
 -- Aggregate returns ONE value
 
 -- GROUP BY
+SELECT MAX(stu_cgpa)
+FROM stud_details
+GROUP BY stu_branch;
+
 SELECT MAX(stu_cgpa), stu_branch
 FROM stud_details
 GROUP BY stu_branch;

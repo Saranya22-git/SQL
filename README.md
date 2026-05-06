@@ -79,6 +79,7 @@ Hey everybody!!!
 
 #### **Database**
 **Database:** *A Database is an organized collection of data stores electronically so it can be easily accessed, managed and updated.*
+
 **Example for database:** *College stores student details, marks, attendance. All this is stored in a database.*
 
 #### **Why do we need database?**
@@ -90,6 +91,7 @@ Hey everybody!!!
 
 #### **🔹Relational Database (RDBMS):** 
 *Data is stored in tables (rows & columns)*
+
    **Example:** *MySQL, PostgreSQL, Oracle database.*
   |   ID   |  Name  |  Marks  |
   |--------|--------|---------|
@@ -97,6 +99,7 @@ Hey everybody!!!
 
 #### **🔹Non-Relational database (No SQL):** 
 *Data is stored in JSON, documents, key-value pairs.*
+
 **Example:** *MongoDB*
 ```json
 {
@@ -122,13 +125,16 @@ Hey everybody!!!
 
 #### **Column**
 **Column:** *Column is also called as Field. Column is an Attribute (Property).*
-    **Example:** *Name, Marks, id*
+
+**Example:** *Name, Marks, id*
 
 #### **Primary Key**
 **Primary Key:** *A primary key is a column (or set of columns) that uniquely identifies each row in a table.*
-    - Must be unique
-    - Cannot be NULL
-    - Only one primary key per table
+
+  - Must be unique
+  - Cannot be NULL
+  - Only one primary key per table
+
 **Example:** 
 ```sql
 CREATE TABLE student_details 
@@ -139,6 +145,7 @@ CREATE TABLE student_details
 ```
 #### **Foreign Key**
 **Foreign Key:** *A foreign key is a columns that creates a realtionship between two tables. It refers to the primary key of another table.*
+
 **Example:**   
 ```sql
             -- TABLE-1
@@ -495,9 +502,11 @@ WHERE name IN("Sara","Tej");
 
 ##### **LIKE**
 ***LIKE** is used to search patterns in text.*
+
 *Symbols Used:*
-"%" Any number of characters.
-"-" Single character.
+
+- "%" Any number of characters.
+- "-" Single character.
 ```sql
 SELECT * FROM table_name
 WHERE column LIKE pattern.
@@ -590,7 +599,7 @@ ORDER BY stu_name ASC;
 ##### **Using ORDER BY with column position**
 ```sql
 SELECT stu_cgpa, stu_name FROM stud_details
-ORDER BY 3 ASC;
+ORDER BY 1 ASC;
 ```
 
 #### **Aggregate Functions**
@@ -599,8 +608,8 @@ ORDER BY 3 ASC;
 ##### **COUNT()**
 *Counts number of rows.*
 ```sql
--- Syntax
-SELECT COUNT(column_name)
+-- Syntax for counting all the rows
+SELECT COUNT(*)
 FROM table_name;
 
 -- Example
@@ -666,6 +675,10 @@ FROM stud_details;
 SELECT COUNT(*)
 FROM table_name
 WHERE condition;
+
+SELECT COUNT(stu_cgpa)
+FROM stud_details
+WHERE stu_cgpa>=9;
 ```
 
 ##### **Aggregate ignores NULL values.**
