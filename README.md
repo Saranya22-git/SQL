@@ -805,17 +805,47 @@ SQL has a fixed order:
   ```
 
 ###### **NATURAL JOIN**
-  *Natural Join automatically joins tables using columns that have the same name.*
+  *NATURAL JOIN automatically joins tables using columns that have the same name.*
   ```sql
+  -- Syntax
+  SELECT * FROM table1
+  NATURAL JOIN table2;
+
   -- Example
   SELECT * FROM grocery
   NATURAL JOIN grocery_transaction;
   ```
-  
+
 ###### **CROSS JOIN**
-  **
+  *CROSS JOIN combines every row from first table with every row from second table.*
+```sql
+-- Syntax
+SELECT * FROM table1
+CROSS JOIN table2;
 
+-- Example
+  SELECT * FROM grocery
+  CROSS JOIN grocery_transaction;
+```
 ###### **SELF JOIN**
+*Joining a table with itself.*
+```sql
+-- Syntax
+SELECT a.col, b.col
+FROM table a
+JOIN table b
+ON a.column=b.column;
 
+-- Example
+SELECT 
+g.grocery_name AS grocery,
+r.grocery_name AS referred_by
+FROM grocery g
+LEFT JOIN grocery r
+ON g.referral_id=r.grocery_id;
+```
 
-
+*These are completely equivalent:*
+- **LEFT JOIN= LEFT OUTER JOIN**
+- **RIGHT JOIN=RIGHT OUTER JOIN**
+- **FULL JOIN=FULL OUTER JOIN** 

@@ -398,3 +398,36 @@ SELECT * FROM grocery
 RIGHT JOIN
 grocery_transaction
 ON grocery.grocery_id=grocery_transaction.grocery_id;
+
+-- NATURAL JOIN
+SELECT * FROM grocery
+NATURAL JOIN grocery_transaction;
+
+-- CROSS JOIN
+SELECT * FROM grocery
+CROSS JOIN grocery_transaction;
+
+-- SELF JOIN
+ALTER TABLE grocery
+ADD referral_id INT;
+
+SELECT * FROM grocery;
+
+UPDATE grocery
+SET referral_id=1
+WHERE grocery_id=2;
+
+UPDATE grocery
+SET referral_id=2
+WHERE grocery_id=3;
+
+UPDATE grocery
+SET referral_id=2
+WHERE grocery_id=4;
+
+SELECT 
+g.grocery_name AS grocery,
+r.grocery_name AS referred_by
+FROM grocery g
+LEFT JOIN grocery r
+ON g.referral_id=r.grocery_id;
