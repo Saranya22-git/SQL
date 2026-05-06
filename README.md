@@ -65,8 +65,8 @@ Hey everybody!!!
   - [**MIN()**](#min)
   - [**MAX()**](#max)
   - [**Aggregate + WHERE**](#aggregate--where)
-  - [*Aggregate ignores NULL values.*](#aggregate-ignores-null-values)
-  - [*Aggregate returns ONE value.*](#aggregate-returns-one-value)
+  - [**Aggregate ignores NULL values.**](#aggregate-ignores-null-values)
+  - [**Aggregate returns ONE value.**](#aggregate-returns-one-value)
 - [**GROUP BY \& HAVING**](#group-by--having)
   - [**GROUP BY**](#group-by)
   - [**HAVING Clause**](#having-clause)
@@ -668,9 +668,9 @@ FROM table_name
 WHERE condition;
 ```
 
-##### *Aggregate ignores NULL values.*
+##### **Aggregate ignores NULL values.**
 
-##### *Aggregate returns ONE value.*
+##### **Aggregate returns ONE value.**
 
 #### **GROUP BY & HAVING**
 
