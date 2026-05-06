@@ -734,8 +734,8 @@ SQL has a fixed order:
   ON table1.column=table2.column;
 
   --Example
-  SELECT grocery_name,grocery_amount FROM grocery
-  INNER JOIN grocery_transaction 
+  SELECT * FROM grocery
+  INNER JOIN grocery_transaction
   ON grocery.grocery_id=grocery_transaction.grocery_id;
   ```
 
@@ -749,8 +749,8 @@ SQL has a fixed order:
   ON table1.column=table2.column;
 
   -- Example
-  SELECT grocery_name,grocery_amount FROM grocery
-  LEFT JOIN grocery_transaction 
+  SELECT * FROM grocery
+  LEFT JOIN grocery_transaction
   ON grocery.grocery_id=grocery_transaction.grocery_id;
   ```
 
@@ -764,13 +764,37 @@ SQL has a fixed order:
   ON table1.column=table2.column;
 
   -- Example
-  SELECT grocery_name,grocery_amount FROM grocery
-  RIGHT JOIN grocery_transaction 
+  SELECT * FROM grocery
+  RIGHT JOIN grocery_transaction
   ON grocery.grocery_id=grocery_transaction.grocery_id;
   ```
 
 - **FULL JOIN**
   *Returns all records from both sides.*
+  ```sql
+  -- Syntax
+  SELECT columns
+  FROM table1
+  FULL JOIN table2
+  ON table1.column=table2.column;
+
+  -- Example
+  SELECT * FROM grocery
+  FULL JOIN grocery_transaction
+  ON grocery.grocery_id=grocery_transaction.grocery_id;
+
+  *MySQL supports INNER JOIN, LEFT JOIN, RIGHT JOIN but FULL JOIN not supported. MySQL alternative for FULL JOIN*
+  
+  SELECT * FROM grocery
+  LEFT JOIN grocery_transaction
+  ON grocery.grocery_id=grocery_transaction.grocery_id
+
+  UNION
+
+  SELECT * FROM grocery
+  RIGHT JOIN grocery_transaction
+  ON grocery.grocery_id=grocery_transaction.grocery_id;
+  ```
   
 - **CROSS JOIN**
 - **SELF JOIN**

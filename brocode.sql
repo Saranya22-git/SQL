@@ -367,23 +367,34 @@ DROP TABLE grocery_transaction;
 -- Joins
 -- INNER JOINS
 SELECT * FROM grocery
-INNER JOIN grocery_transaction 
-ON grocery.grocery_id=grocery_transaction.grocery_id;
-
-SELECT * FROM grocery_transaction
-INNER JOIN grocery 
-ON grocery_transaction.grocery_id=grocery.grocery_id;
-
-SELECT grocery_name,grocery_amount FROM grocery
-INNER JOIN grocery_transaction 
+INNER JOIN grocery_transaction
 ON grocery.grocery_id=grocery_transaction.grocery_id;
 
 -- LEFT JOIN
-SELECT grocery_name,grocery_amount FROM grocery
-LEFT JOIN grocery_transaction 
+SELECT * FROM grocery
+LEFT JOIN
+grocery_transaction
 ON grocery.grocery_id=grocery_transaction.grocery_id;
 
 -- RIGHT JOIN
-SELECT grocery_name,grocery_amount FROM grocery
-RIGHT JOIN grocery_transaction 
+SELECT * FROM grocery
+RIGHT JOIN
+grocery_transaction
+ON grocery.grocery_id=grocery_transaction.grocery_id;
+
+-- FULL JOIN
+SELECT * FROM grocery
+FULL JOIN grocery_transaction
+ON grocery.grocery_id=grocery_transaction.grocery_id;
+
+SELECT * FROM grocery
+LEFT JOIN
+grocery_transaction
+ON grocery.grocery_id=grocery_transaction.grocery_id
+
+UNION
+
+SELECT * FROM grocery
+RIGHT JOIN
+grocery_transaction
 ON grocery.grocery_id=grocery_transaction.grocery_id;
