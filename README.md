@@ -72,6 +72,13 @@ Hey everybody!!!
   - [**HAVING Clause**](#having-clause)
 - [**JOINS**](#joins)
   - [**Types of Joins**](#types-of-joins)
+    - [**INNER JOIN**](#inner-join)
+    - [**LEFT JOIN**](#left-join)
+    - [**RIGHT JOIN**](#right-join)
+    - [**FULL JOIN**](#full-join)
+    - [**NATURAL JOIN**](#natural-join)
+    - [**CROSS JOIN**](#cross-join)
+    - [**SELF JOIN**](#self-join)
 
 #### **Data**
 
@@ -724,7 +731,8 @@ SQL has a fixed order:
 *A **JOIN** is used to combine data from two or more tables based on a related column. Basically JOIN = combine tables using a common column.*
 
 ##### **Types of Joins**
-- **INNER JOIN**
+
+###### **INNER JOIN**
   *Returns only matching records in both tables.*
   ```sql
   -- Syntax for specific columns
@@ -739,7 +747,7 @@ SQL has a fixed order:
   ON grocery.grocery_id=grocery_transaction.grocery_id;
   ```
 
-- **LEFT JOIN**
+###### **LEFT JOIN**
   *Returns all records from left table + matching from right.*
   ```sql
   -- Syntax
@@ -754,7 +762,7 @@ SQL has a fixed order:
   ON grocery.grocery_id=grocery_transaction.grocery_id;
   ```
 
-- **RIGHT JOIN**
+###### **RIGHT JOIN**
   *Returns all records from right table + matching from left.*
   ```sql
   -- Syntax
@@ -769,7 +777,7 @@ SQL has a fixed order:
   ON grocery.grocery_id=grocery_transaction.grocery_id;
   ```
 
-- **FULL JOIN**
+###### **FULL JOIN**
   *Returns all records from both sides.*
   ```sql
   -- Syntax
@@ -784,7 +792,7 @@ SQL has a fixed order:
   ON grocery.grocery_id=grocery_transaction.grocery_id;
 
   *MySQL supports INNER JOIN, LEFT JOIN, RIGHT JOIN but FULL JOIN not supported. MySQL alternative for FULL JOIN*
-  
+
   SELECT * FROM grocery
   LEFT JOIN grocery_transaction
   ON grocery.grocery_id=grocery_transaction.grocery_id
@@ -795,10 +803,19 @@ SQL has a fixed order:
   RIGHT JOIN grocery_transaction
   ON grocery.grocery_id=grocery_transaction.grocery_id;
   ```
+
+###### **NATURAL JOIN**
+  *Natural Join automatically joins tables using columns that have the same name.*
+  ```sql
+  -- Example
+  SELECT * FROM grocery
+  NATURAL JOIN grocery_transaction;
+  ```
   
-- **CROSS JOIN**
-- **SELF JOIN**
+###### **CROSS JOIN**
+  **
+
+###### **SELF JOIN**
 
 
-  
 
