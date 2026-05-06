@@ -79,6 +79,10 @@ Hey everybody!!!
     - [**NATURAL JOIN**](#natural-join)
     - [**CROSS JOIN**](#cross-join)
     - [**SELF JOIN**](#self-join)
+- [**SUBQUERIES**](#subqueries)
+  - [**Types of Subqueries**](#types-of-subqueries)
+    - [**Single Row Subquery**](#single-row-subquery)
+    - [**Multiple Row Subquery**](#multiple-row-subquery)
 
 #### **Data**
 
@@ -849,3 +853,39 @@ ON g.referral_id=r.grocery_id;
 - **LEFT JOIN= LEFT OUTER JOIN**
 - **RIGHT JOIN=RIGHT OUTER JOIN**
 - **FULL JOIN=FULL OUTER JOIN** 
+  
+#### **SUBQUERIES**
+*A subquery is a query inside another query. Basically Subquery = Inner query inside outer query.*
+
+```sql
+-- Structure
+SELECT ...
+FROM ...
+WHERE column=(
+  SELECT ...
+);
+```
+
+- *Inner Query runs first.*
+- *Outer query uses that result.*
+
+##### **Types of Subqueries**
+
+###### **Single Row Subquery**
+*Returns only ONE value.*
+```sql
+-- Example
+SELECT * FROM stud_details
+WHERE stu_cgpa=(
+SELECT MIN(stu_cgpa) FROM stud_details);
+```
+
+###### **Multiple Row Subquery**
+*Returns multiple values.*
+```sql
+-- Example
+SELECT * FROM stud_details
+WHERE stu_name IN(
+  SELECT stu_name FROM stud_details
+);
+```

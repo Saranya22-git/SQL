@@ -431,3 +431,11 @@ r.grocery_name AS referred_by
 FROM grocery g
 LEFT JOIN grocery r
 ON g.referral_id=r.grocery_id;
+
+-- SUBQUERY
+SELECT * FROM stud_details;
+
+SELECT * FROM stud_details
+WHERE stu_cgpa=(
+SELECT MAX(stu_cgpa)
+FROM stud_details);
