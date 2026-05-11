@@ -99,6 +99,7 @@ Hey everybody!!!
     - [**SUBSTRING()**](#substring)
 - [**DATE FUNCTIONS**](#date-functions)
   - [**Common Date Functions**](#common-date-functions)
+- [**WINDOW FUNCTIONS**](#window-functions)
 
 #### **Data**
 
@@ -1123,4 +1124,14 @@ SELECT MONTH(NOW());
 ```sql
 -- Syntax with example
 SELECT DAY(NOW());
+```
+
+#### **WINDOW FUNCTIONS**
+*Window functions perform calculations across a set of rows without grouping them into one row. Basically, aggregate functions - reduce rows, window functions - keep rows + add calculations.*
+
+```sql
+FUNCTION_NAME() OVER(
+  PARTITION BY COLUMN 
+  ORDER BY column
+)
 ```

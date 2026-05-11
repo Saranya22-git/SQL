@@ -426,11 +426,11 @@ SET referral_id=2
 WHERE grocery_id=4;
 
 SELECT 
-g.grocery_name AS grocery,
+h.grocery_name AS grocery,
 r.grocery_name AS referred_by
-FROM grocery g
+FROM grocery h
 LEFT JOIN grocery r
-ON g.referral_id=r.grocery_id;
+ON h.referral_id=r.grocery_id;
 
 -- SUBQUERY
 SELECT * FROM stud_details;
@@ -498,3 +498,12 @@ FROM stud_details;
 -- SUBSTRING()
 SELECT SUBSTRING(stu_name, 1, 4)
 FROM stud_details;
+
+-- WINDOW FUNCTIONS
+
+SELECT stu_branch, MAX(stu_cgpa) AS max_cgpa
+FROM stud_details
+GROUP BY stu_branch;
+
+SELECT s.*, MAX(stu_cgpa) OVER(partition by stu_name) as max_stu_cgpa
+FROM stud_details s;
