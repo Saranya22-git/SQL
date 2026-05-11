@@ -100,6 +100,8 @@ Hey everybody!!!
 - [**DATE FUNCTIONS**](#date-functions)
   - [**Common Date Functions**](#common-date-functions)
 - [**WINDOW FUNCTIONS**](#window-functions)
+  - [**ROW\_NUMBER()**](#row_number)
+  - [**RANK()**](#rank)
 
 #### **Data**
 
@@ -1135,3 +1137,20 @@ FUNCTION_NAME() OVER(
   ORDER BY column
 )
 ```
+
+##### **ROW_NUMBER()**
+*Assigns unique sequential number to each row.*
+```sql
+-- Syntax
+SELECT column
+ROW_NUMBER() OVER(PARTITION BY COLUMN) AS alias
+FROM table_name;
+
+-- Example
+SELECT s.*,
+row_number() OVER(partition by stu_branch) as row_num
+FROM stud_details s;
+```
+
+##### **RANK()**
+**

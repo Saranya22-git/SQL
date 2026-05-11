@@ -507,3 +507,13 @@ GROUP BY stu_branch;
 
 SELECT s.*, MAX(stu_cgpa) OVER(partition by stu_name) as max_stu_cgpa
 FROM stud_details s;
+
+-- ROW_NUMBER()
+SELECT s.*,
+row_number() OVER(partition by stu_branch) as row_num
+FROM stud_details s;
+
+-- RANK()
+SELECT s.*,
+RANK() OVER(ORDER BY stu_cgpa) as rank_col
+FROM stud_details s;
