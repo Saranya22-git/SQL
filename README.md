@@ -1129,7 +1129,7 @@ SELECT DAY(NOW());
 ```
 
 #### **WINDOW FUNCTIONS**
-*Window functions perform calculations across a set of rows without grouping them into one row. Basically, aggregate functions - reduce rows, window functions - keep rows + add calculations.*
+*A Window function performs calculations across rows withput removing rows. Basically, GROUP BY = Combines/Collapses rows, Window Function = Keeps all rows, adds extra calculated information.*
 
 ```sql
 FUNCTION_NAME() OVER(
@@ -1137,6 +1137,16 @@ FUNCTION_NAME() OVER(
   ORDER BY column
 )
 ```
+
+**OVER():**
+
+- *Apply calculation over all rows.*
+- *WITHOUT grouping/removing rows.*
+- *OVER() is the heart of window functions.*
+
+**PARTITION BY**
+
+- *Split rows into groups.*
 
 ##### **ROW_NUMBER()**
 *Assigns unique sequential number to each row.*
