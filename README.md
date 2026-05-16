@@ -636,7 +636,10 @@ ORDER BY 1 ASC;
 *Aggregate Functions are used to perform calculations on multiple rows and return a single value. Basically, Many rows - One result.*
 
 ##### **COUNT()**
-*Counts number of rows.*
+- *Counts number of rows.*
+- *COUNT all rows means including duplicates and null rows as long as row exists.*
+- *COUNT(column) counts non-null values only.*
+  
 ```sql
 -- Syntax for counting all the rows
 SELECT COUNT(*)
@@ -1163,4 +1166,4 @@ FROM stud_details s;
 ```
 
 ##### **RANK()**
-**
+*Give position or rank to rows.*
