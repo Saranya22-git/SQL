@@ -16,8 +16,9 @@ Hey everybody!!!
   - [**Types of Databases:**](#types-of-databases)
     - [**🔹Relational Database (RDBMS):**](#relational-database-rdbms)
     - [**🔹Non-Relational database (NoSQL):**](#non-relational-database-nosql)
-- [**Table**](#table)
-- [**Row**](#row)
+- [**Database Concepts**](#database-concepts)
+  - [**Table**](#table)
+  - [**Row**](#row)
 - [**Column**](#column)
 - [**Primary Key**](#primary-key)
 - [**Foreign Key**](#foreign-key)
@@ -175,10 +176,23 @@ Hey everybody!!!
 }
 ```
 
-#### **Table**
-**Table:** *Collection of data (like Excel Sheet)*
+---
 
-#### **Row**
+#### **Database Concepts**
+
+##### **Table**
+
+**Table:** *A table is a collection of related data organized into rows and columns. Basically, Collection of data (like Excel Sheet)*
+
+**Example:**
+
+  |   ID   |  Name  |  Marks  |
+  |--------|--------|---------|
+  |    1   |  Sara  |   89    |
+
+  - *This entire structure is called Table.*
+
+##### **Row**
 **Row:** *Row is also called as Record. Row is a One single entity.*
 
 **Example:**   *1   |  Sara  |   89    |*
