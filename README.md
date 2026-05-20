@@ -5,14 +5,17 @@ Hey everybody!!!
 #### **Table of Contents**
 
 - [**Table of Contents**](#table-of-contents)
-- [**Data**](#data)
-- [**Database**](#database)
-- [**Why do we need database?**](#why-do-we-need-database)
-- [**Types of Databases:**](#types-of-databases)
-- [**🔹Relational Database (RDBMS):**](#relational-database-rdbms)
-- [**🔹Non-Relational database (No SQL):**](#non-relational-database-no-sql)
-- [**What is SQL?**](#what-is-sql)
-- [**DBMS** vs **RDMS**](#dbms-vs-rdms)
+- [**Introduction to Databases**](#introduction-to-databases)
+  - [**Data**](#data)
+  - [**Database**](#database)
+    - [**Why do we need database?**](#why-do-we-need-database)
+  - [**What is DBMS?**](#what-is-dbms)
+  - [**What is RDBMS?**](#what-is-rdbms)
+  - [**DBMS** vs **RDMS**](#dbms-vs-rdms)
+  - [**What is SQL?**](#what-is-sql)
+  - [**Types of Databases:**](#types-of-databases)
+    - [**🔹Relational Database (RDBMS):**](#relational-database-rdbms)
+    - [**🔹Non-Relational database (NoSQL):**](#non-relational-database-nosql)
 - [**Table**](#table)
 - [**Row**](#row)
 - [**Column**](#column)
@@ -103,23 +106,57 @@ Hey everybody!!!
   - [**ROW\_NUMBER()**](#row_number)
   - [**RANK()**](#rank)
 
-#### **Data**
+#### **Introduction to Databases**
+
+##### **Data**
 
 **Data:** *Data is a collection of raw facts, values, or information.*
 
-#### **Database**
-**Database:** *A Database is an organized collection of data stores electronically so it can be easily accessed, managed and updated.*
+**Examples of Data:** *Ram, 101, 95, Hyderabad*
+
+##### **Database**
+
+**Database:** *A Database is an organized collection of data stores electronically so it can be easily accessed, managed and updated. Basically, Database = Organized storage of data.*
 
 **Example for database:** *College stores student details, marks, attendance. All this is stored in a database.*
 
-#### **Why do we need database?**
+###### **Why do we need database?**
+
 **🔹*Without database:*** *Data is stored in files, difficult to search, data duplication, no security with database.*
 
 **🔹*With database:*** *Fast retrieval (getting something), Organized data, Secure, Multi-user access.*
 
-#### **Types of Databases:**
+##### **What is DBMS?**
 
-#### **🔹Relational Database (RDBMS):** 
+*DBMS(Database Management System) is software used to create and manage databases. Basically, DBMS = Software that manages database.*
+
+**Examples:** *MySQL, Oracle Database, Microsoft SQL Server* 
+
+##### **What is RDBMS?**
+
+*RDBMS(Relational Database Management System) stores data in related tables. Basicaly, RDBMS = Data stored in tables with relationships.*
+
+**Example:**
+
+  |   ID   |  Name  |  Marks  |
+  |--------|--------|---------|
+  |    1   |  Sara  |   89    |
+
+##### **DBMS** vs **RDMS**
+
+- *DBMS stores data in files, while RDBMS stores data in structured tables with relationships between them.*
+- *In DBMS the security is low compared to RDBMS.*
+
+
+##### **What is SQL?**
+
+- *SQL stands for Structured Query Language.*
+- *SQL is used to communicate with databases.*
+- *It is used to create database, Insert data, Update data, Delete data, Fetch data.*
+
+##### **Types of Databases:**
+
+###### **🔹Relational Database (RDBMS):** 
 *Data is stored in tables (rows & columns)*
 
    **Example:** *MySQL, PostgreSQL, Oracle database.*
@@ -127,7 +164,7 @@ Hey everybody!!!
   |--------|--------|---------|
   |    1   |  Sara  |   89    |
 
-#### **🔹Non-Relational database (No SQL):** 
+###### **🔹Non-Relational database (NoSQL):** 
 *Data is stored in JSON, documents, key-value pairs.*
 
 **Example:** *MongoDB*
@@ -137,13 +174,6 @@ Hey everybody!!!
     "marks":89
 }
 ```
-
-#### **What is SQL?**
-*SQL stands for Structured Query Language. It is used to create database, Insert data, Update data, Delete data, Fetch data.*
-
-#### **DBMS** vs **RDMS**
-
-*DBMS stores data in files, while RDBMS stores data in structured tables with relationships between them.*
 
 #### **Table**
 **Table:** *Collection of data (like Excel Sheet)*
