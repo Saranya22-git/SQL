@@ -4,7 +4,6 @@ Hey everybody!!!
 
 #### **Table of Contents**
 
-- [**Table of Contents**](#table-of-contents)
 - [**Introduction to Databases**](#introduction-to-databases)
   - [**Data**](#data)
   - [**Database**](#database)
@@ -50,112 +49,113 @@ Hey everybody!!!
   - [**Boolean**](#boolean)
   - [**Enum**](#enum)
 - [**SQL commands**](#sql-commands)
-- [**DDL**](#ddl)
-  - [**CREATE**](#create)
-  - [**ALTER**](#alter)
-  - [**TRUNCATE**](#truncate)
-  - [**DROP**](#drop)
-- [**DML**](#dml)
-  - [**INSERT**](#insert)
-  - [**UPDATE**](#update)
-  - [**DELETE**](#delete)
-- [**DQL**](#dql)
-  - [**SELECT**](#select)
-  - [**WHERE**](#where)
-  - [**DISTINCT**](#distinct)
-- [**TCL**](#tcl)
-  - [**COMMIT**](#commit)
-  - [**ROLLBACK**](#rollback)
-  - [**SAVEPOINT**](#savepoint)
-- [**DCL**](#dcl)
-  - [**GRANT**](#grant)
-  - [**REVOKE**](#revoke)
-- [**FILTERING DATA**](#filtering-data)
-  - [**WHERE**](#where-1)
-  - [**AND Operator**](#and-operator)
-  - [**OR Operator**](#or-operator)
-  - [**NOT Operator**](#not-operator)
-  - [**BETWEEN**](#between)
-  - [**IN Operator**](#in-operator)
-  - [**LIKE**](#like)
-  - [**IS NULL**](#is-null)
-  - [**IS NOT NULL**](#is-not-null)
-- [**Sorting Data**](#sorting-data)
-  - [**ORDER BY Clause**](#order-by-clause)
-  - [**Using ORDER BY with WHERE**](#using-order-by-with-where)
-  - [**Using ORDER BY with column position**](#using-order-by-with-column-position)
-- [**Aggregate Functions**](#aggregate-functions)
-  - [**COUNT()**](#count)
-  - [**SUM()**](#sum)
-  - [**AVG()**](#avg)
-  - [**MIN()**](#min)
-  - [**MAX()**](#max)
-  - [**Aggregate + WHERE**](#aggregate--where)
-  - [**Aggregate ignores NULL values.**](#aggregate-ignores-null-values)
-  - [**Aggregate returns ONE value.**](#aggregate-returns-one-value)
-- [**GROUP BY \& HAVING**](#group-by--having)
-  - [**GROUP BY**](#group-by)
-  - [**HAVING Clause**](#having-clause)
-- [**JOINS**](#joins)
-  - [**Types of Joins**](#types-of-joins)
-    - [**INNER JOIN**](#inner-join)
-    - [**LEFT JOIN**](#left-join)
-    - [**RIGHT JOIN**](#right-join)
-    - [**FULL JOIN**](#full-join)
-    - [**NATURAL JOIN**](#natural-join)
-    - [**CROSS JOIN**](#cross-join)
-    - [**SELF JOIN**](#self-join)
-- [**SUBQUERIES**](#subqueries)
-  - [**Types of Subqueries**](#types-of-subqueries)
-    - [**Single Row Subquery**](#single-row-subquery)
-    - [**Multiple Row Subquery**](#multiple-row-subquery)
-    - [**Correlated Subquery**](#correlated-subquery)
-- [**SET OPERATIONS**](#set-operations)
-  - [**Types of Set Operations**](#types-of-set-operations)
-    - [**UNION**](#union)
-    - [**UNION ALL**](#union-all)
-    - [**INTERSECT**](#intersect)
-    - [**EXCEPT**](#except)
-- [**STRING FUNCTIONS**](#string-functions)
-  - [**Common String Functions**](#common-string-functions)
-    - [**CONCAT()**](#concat)
-    - [**LENGTH()**](#length)
-    - [**UPPER()**](#upper)
-    - [**LOWER()**](#lower)
-    - [**SUBSTRING()**](#substring)
-- [**DATE FUNCTIONS**](#date-functions)
-  - [**Common Date Functions**](#common-date-functions)
-- [**WINDOW FUNCTIONS**](#window-functions)
-  - [**ROW\_NUMBER()**](#row_number)
-  - [**RANK()**](#rank)
+  - [**DDL**](#ddl)
+    - [**DDL Commands**](#ddl-commands)
+      - [**CREATE**](#create)
+    - [**ALTER**](#alter)
+    - [**TRUNCATE**](#truncate)
+    - [**DROP**](#drop)
+  - [**DML**](#dml)
+    - [**INSERT**](#insert)
+    - [**UPDATE**](#update)
+    - [**DELETE**](#delete)
+  - [**DQL**](#dql)
+    - [**SELECT**](#select)
+    - [**WHERE**](#where)
+    - [**DISTINCT**](#distinct)
+  - [**TCL**](#tcl)
+    - [**COMMIT**](#commit)
+    - [**ROLLBACK**](#rollback)
+    - [**SAVEPOINT**](#savepoint)
+  - [**DCL**](#dcl)
+    - [**GRANT**](#grant)
+    - [**REVOKE**](#revoke)
+  - [**FILTERING DATA**](#filtering-data)
+    - [**WHERE**](#where-1)
+    - [**AND Operator**](#and-operator)
+    - [**OR Operator**](#or-operator)
+    - [**NOT Operator**](#not-operator)
+    - [**BETWEEN**](#between)
+    - [**IN Operator**](#in-operator)
+    - [**LIKE**](#like)
+    - [**IS NULL**](#is-null)
+    - [**IS NOT NULL**](#is-not-null)
+  - [**Sorting Data**](#sorting-data)
+    - [**ORDER BY Clause**](#order-by-clause)
+    - [**Using ORDER BY with WHERE**](#using-order-by-with-where)
+    - [**Using ORDER BY with column position**](#using-order-by-with-column-position)
+  - [**Aggregate Functions**](#aggregate-functions)
+    - [**COUNT()**](#count)
+    - [**SUM()**](#sum)
+    - [**AVG()**](#avg)
+    - [**MIN()**](#min)
+    - [**MAX()**](#max)
+    - [**Aggregate + WHERE**](#aggregate--where)
+    - [**Aggregate ignores NULL values.**](#aggregate-ignores-null-values)
+    - [**Aggregate returns ONE value.**](#aggregate-returns-one-value)
+  - [**GROUP BY \& HAVING**](#group-by--having)
+    - [**GROUP BY**](#group-by)
+    - [**HAVING Clause**](#having-clause)
+  - [**JOINS**](#joins)
+    - [**Types of Joins**](#types-of-joins)
+      - [**INNER JOIN**](#inner-join)
+      - [**LEFT JOIN**](#left-join)
+      - [**RIGHT JOIN**](#right-join)
+      - [**FULL JOIN**](#full-join)
+      - [**NATURAL JOIN**](#natural-join)
+      - [**CROSS JOIN**](#cross-join)
+      - [**SELF JOIN**](#self-join)
+  - [**SUBQUERIES**](#subqueries)
+    - [**Types of Subqueries**](#types-of-subqueries)
+      - [**Single Row Subquery**](#single-row-subquery)
+      - [**Multiple Row Subquery**](#multiple-row-subquery)
+      - [**Correlated Subquery**](#correlated-subquery)
+  - [**SET OPERATIONS**](#set-operations)
+    - [**Types of Set Operations**](#types-of-set-operations)
+      - [**UNION**](#union)
+      - [**UNION ALL**](#union-all)
+      - [**INTERSECT**](#intersect)
+      - [**EXCEPT**](#except)
+  - [**STRING FUNCTIONS**](#string-functions)
+    - [**Common String Functions**](#common-string-functions)
+      - [**CONCAT()**](#concat)
+      - [**LENGTH()**](#length)
+      - [**UPPER()**](#upper)
+      - [**LOWER()**](#lower)
+      - [**SUBSTRING()**](#substring)
+  - [**DATE FUNCTIONS**](#date-functions)
+    - [**Common Date Functions**](#common-date-functions)
+  - [**WINDOW FUNCTIONS**](#window-functions)
+    - [**ROW\_NUMBER()**](#row_number)
+    - [**RANK()**](#rank)
 
-#### **Introduction to Databases**
+### **Introduction to Databases**
 
-##### **Data**
+#### **Data**
 
 **Data:** *Data is a collection of raw facts, values, or information.*
 
 **Examples of Data:** *Ram, 101, 95, Hyderabad*
 
-##### **Database**
+#### **Database**
 
 **Database:** *A Database is an organized collection of data stores electronically so it can be easily accessed, managed and updated. Basically, Database = Organized storage of data.*
 
 **Example for database:** *College stores student details, marks, attendance. All this is stored in a database.*
 
-###### **Why do we need database?**
+##### **Why do we need database?**
 
 **🔹*Without database:*** *Data is stored in files, difficult to search, data duplication, no security with database.*
 
 **🔹*With database:*** *Fast retrieval (getting something), Organized data, Secure, Multi-user access.*
 
-##### **What is DBMS?**
+#### **What is DBMS?**
 
 *DBMS(Database Management System) is software used to create and manage databases. Basically, DBMS = Software that manages database.*
 
 **Examples:** *MySQL, Oracle Database, Microsoft SQL Server* 
 
-##### **What is RDBMS?**
+#### **What is RDBMS?**
 
 *RDBMS(Relational Database Management System) stores data in related tables. Basicaly, RDBMS = Data stored in tables with relationships.*
 
@@ -165,21 +165,21 @@ Hey everybody!!!
   |--------|--------|---------|
   |    1   |  Sara  |   89    |
 
-##### **DBMS** vs **RDMS**
+#### **DBMS** vs **RDMS**
 
 - *DBMS stores data in files, while RDBMS stores data in structured tables with relationships between them.*
 - *In DBMS the security is low compared to RDBMS.*
 
 
-##### **What is SQL?**
+#### **What is SQL?**
 
 - *SQL stands for Structured Query Language.*
 - *SQL is used to communicate with databases.*
 - *It is used to create database, Insert data, Update data, Delete data, Fetch data.*
 
-##### **Types of Databases:**
+#### **Types of Databases:**
 
-###### **🔹Relational Database (RDBMS):** 
+##### **🔹Relational Database (RDBMS):** 
 *Data is stored in tables (rows & columns)*
 
    **Example:** *MySQL, PostgreSQL, Oracle database.*
@@ -187,7 +187,7 @@ Hey everybody!!!
   |--------|--------|---------|
   |    1   |  Sara  |   89    |
 
-###### **🔹Non-Relational database (NoSQL):** 
+##### **🔹Non-Relational database (NoSQL):** 
 *Data is stored in JSON, documents, key-value pairs.*
 
 **Example:** *MongoDB*
@@ -200,9 +200,9 @@ Hey everybody!!!
 
 ---
 
-#### **Database Concepts**
+### **Database Concepts**
 
-##### **Table**
+#### **Table**
 
 **Table:** *A table is a collection of related data organized into rows and columns. Basically, Collection of data (like Excel Sheet)*
 
@@ -214,7 +214,7 @@ Hey everybody!!!
 
   - *This entire structure is called Table.*
 
-##### **Row**
+#### **Row**
  
 - *Row is also called as Record or Tuple*. 
 - *Row is a One single entity.*
@@ -223,7 +223,7 @@ Hey everybody!!!
 
 **Example:**   *1   |  Sara  |   89    |*
 
-##### **Column**
+#### **Column**
 
 - *Column is also called as Field or Attribute.* 
 - *A Column represents one Attribute/Property of data.*
@@ -231,7 +231,7 @@ Hey everybody!!!
 
 **Example:** *Name, Marks, id*
 
-##### **Schema**
+#### **Schema**
 
 - *Schema is the blueprint/design of a database.*
 - *Includes table names, column names, datatypes, relationships, constraints.*
@@ -244,11 +244,11 @@ CREATE TABLE students (
     marks INT
 );
 ```
-##### **Relationships between Tables**
+#### **Relationships between Tables**
 
 - *Relationships connect tables using keys.*
   
-##### **Primary Key**
+#### **Primary Key**
 
 *A primary key is a column (or set of columns) that uniquely identifies each row in a table.*
 
@@ -265,7 +265,7 @@ CREATE TABLE student_details
                     );
 ```
 
-##### **Foreign Key**
+#### **Foreign Key**
 **Foreign Key:** *A foreign key is a columns that creates a realtionship between two tables. It refers to the primary key of another table.*
 
 **Example:**   
@@ -284,10 +284,10 @@ CREATE TABLE student_details
             );
 ```
 
-##### **Constraints**
+#### **Constraints**
 *Constraints are rules applied to columns to maintain data accuracy and integrity.*
 
-###### **NOT NULL** 
+##### **NOT NULL** 
 *Ensures column cannot have NULL values.*
   ```sql
         CREATE TABLE student_details(
@@ -296,7 +296,7 @@ CREATE TABLE student_details
         );
   ```
 
-###### **UNIQUE** 
+##### **UNIQUE** 
 *Ensures all values in a column are different.*
  ```sql
         CREATE TABLE student_details (
@@ -304,14 +304,14 @@ CREATE TABLE student_details
             name VARCHAR(20)
         );
  ```
-###### **CHECK** 
+##### **CHECK** 
 *Ensures values meet a condition.*
  ```sql
         CREATE TABLE student_details (
             age INT CHECK (age>=18)
         );
  ```
-###### **DEFAULT** 
+##### **DEFAULT** 
 *Assigns default value if none provided.*
  ```sql
         CREATE TABLE student_details (
@@ -319,9 +319,9 @@ CREATE TABLE student_details
         );
  ```
 
-###### **Primary Key**
+##### **Primary Key**
 
-###### **Foreign Key**
+##### **Foreign Key**
 
 **Examples for Constraints:**
 ```sql
@@ -334,7 +334,7 @@ CREATE TABLE students (
 
 ---
 
-#### **SQL Data Types**
+### **SQL Data Types**
 
 **What are Data Types?**
 
@@ -346,11 +346,11 @@ CREATE TABLE students (
 - ***Data Validation:** Wrong data prevented.*
 - ***Faster Queries:** Optimized datatypes improve performance.*
 
-##### **Numeric Data Types:**
+#### **Numeric Data Types:**
 
 *Used for storing numbers.*
 
-###### **INT**
+##### **INT**
 
 - *Store whole numbers.*
 
@@ -359,11 +359,11 @@ CREATE TABLE students (
 age INT
 ```
 
-###### **BIGINT**
+##### **BIGINT**
 
 - *Stores very large integers.*
 
-###### **FLOAT**
+##### **FLOAT**
 
 - *Stores approximate decimal numbers.*
 - *FLOAT may lose precision sometimes.*
@@ -373,11 +373,11 @@ age INT
 marks FLOAT
 ```
 
-###### **DOUBLE**
+##### **DOUBLE**
 
 - *Stores larger and more precise decimal numbers than FLOAT.*
   
-###### **DECIMAL**
+##### **DECIMAL**
 
 - *Stores exact decimal values.*
   
@@ -386,23 +386,23 @@ marks FLOAT
 salary DECIMAL(10,2)
 ```
 
-##### **String Data Types:**
+#### **String Data Types:**
 
 *Used for storing data.*
 
-###### **CHAR**
+##### **CHAR**
 
 - *Fixed-length text datatype.*
 - *It wastes memory.*
 - *Faster*
 
-###### **VARCHAR**
+##### **VARCHAR**
 
 - *Variable-length text datatype.*
 - *Saves memory.*
 - *Flexible*
 
-###### **TEXT**
+##### **TEXT**
 
 - *Stores very large text data.*
 
@@ -411,9 +411,9 @@ salary DECIMAL(10,2)
 description TEXT
 ```
 
-##### **Date and Time Data Types:**
+#### **Date and Time Data Types:**
 
-###### **DATE**
+##### **DATE**
 
 - *Stores only DATE.*
 - *Format: YYYY-MM-DD*
@@ -423,12 +423,12 @@ description TEXT
 dob DATE
 ```
 
-###### **TIME**
+##### **TIME**
 
 - *Stores only TIME.*
 - *Format: HH:MM:SS*
 
-###### **DATETIME**
+##### **DATETIME**
 
 - *Stores both date and time.*
 
@@ -437,11 +437,11 @@ dob DATE
 created_at DATETIME
 ```
 
-###### **TIMESTAMP**
+##### **TIMESTAMP**
 
 - *Stores timestamp values.*
 
-##### **Boolean**
+#### **Boolean**
 
 - *Stores TRUE or FALSE values.*
   
@@ -450,7 +450,7 @@ created_at DATETIME
 is_active BOOLEAN
 ```
 
-##### **Enum**
+#### **Enum**
 
 - *Stores one value from predefined list.*
 - *It prevents invalid values.*
@@ -462,18 +462,34 @@ gender ENUM('Male','Female')
 
 ---
 
-#### **SQL commands**
- *SQL commands are used to interact with the database. There are 5 types of SQL commands. They are:*
- - *DDL - CREATE, ALTER, DROP, TRUNCATE*
- - *DML - INSERT, UPDATE, DELETE*
- - *DQL - SELECT, WHERE, DISTINCT*
- - *TCL - COMMIT, ROLLBACK, SAVEPOINT*
- - *DCL - GRANT, REVOKE*
+### **SQL commands**
+
+ *SQL commands are interactions used to communicate with the database. SQL commands are divided into 5 categories. They are:*
+
+| Type |         Full Form            | Purpose       |
+| ---- | ---------------------------- | ------------- |
+| DDL  | Data Definition Language     | Structure     |
+| DML  | Data Manipulation Language   | Data handling |
+| DQL  | Data Query Language          | Fetch data    |
+| TCL  | Transaction Control Language | Transactions  |
+| DCL  | Data Control Language        | Permissions   |
+
 
 #### **DDL** 
-*DDL stands for Data Definition Language. DDL commands are used to create, modify or delete the structure of database objects (like tables). Basically DDL = Structure (Table design).*
 
-##### **CREATE**
+- *DDL stands for Data Definition Language.* 
+- *DDL commands are used to define or modify database structure. Basically, DDL = Structure-related commands.*
+
+##### **DDL Commands**
+
+1. **CREATE**
+2. **ALTER**
+3. **DROP**
+4. **TRUNCATE**
+5. **RENAME**
+
+
+###### **CREATE**
 *Used to CREATE a new table or database.*
 ```sql
 -- Syntax
