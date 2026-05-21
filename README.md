@@ -32,6 +32,20 @@ Hey everybody!!!
     - [**Primary Key**](#primary-key-1)
     - [**Foreign Key**](#foreign-key-1)
 - [**SQL Data Types**](#sql-data-types)
+  - [**Numeric Data Types:**](#numeric-data-types)
+    - [**INT**](#int)
+    - [**BIGINT**](#bigint)
+    - [**FLOAT**](#float)
+    - [**DOUBLE**](#double)
+    - [**DECIMAL**](#decimal)
+  - [**String Data Types:**](#string-data-types)
+    - [**CHAR**](#char)
+    - [**VARCHAR**](#varchar)
+    - [**TEXT**](#text)
+  - [**Date and Time Data Types:**](#date-and-time-data-types)
+    - [**DATE**](#date)
+    - [**TIME**](#time)
+    - [**DATETIME**](#datetime)
 - [**Basic SQL commands**](#basic-sql-commands)
 - [**DDL**](#ddl)
   - [**CREATE**](#create)
@@ -324,6 +338,94 @@ CREATE TABLE students (
 *Data types define what kind of data a column can store.*
 
 **Why Data Types are important?**
+
+- ***Memory Optimization:** Correct datatype saves memory.*
+- ***Data Validation:** Wrong data prevented.*
+- ***Faster Queries:** Optimized datatypes improve performance.*
+
+##### **Numeric Data Types:**
+
+*Used for storing numbers.*
+
+###### **INT**
+
+- *Store whole numbers.*
+
+**Example:**
+```sql
+age INT
+```
+
+###### **BIGINT**
+
+- *Stores very large integers.*
+
+###### **FLOAT**
+
+- *Stores approximate decimal numbers.*
+- *FLOAT may lose precision sometimes.*
+
+**Example:**
+```sql
+marks FLOAT
+```
+
+###### **DOUBLE**
+
+- *Stores larger and more precise decimal numbers than FLOAT.*
+  
+###### **DECIMAL**
+
+- *Stores exact decimal values.*
+  
+**Example:**
+```sql
+salary DECIMAL(10,2)
+```
+
+##### **String Data Types:**
+
+*Used for storing data.*
+
+###### **CHAR**
+
+- *Fixed-length text datatype.*
+- *It wastes memory.*
+- *Faster*
+
+###### **VARCHAR**
+
+- *Variable-length text datatype.*
+- *Saves memory.*
+- *Flexible*
+
+###### **TEXT**
+
+- *Stores very large text data.*
+
+**Example:**
+```sql
+description TEXT
+```
+
+##### **Date and Time Data Types:**
+
+###### **DATE**
+
+- *Stores only DATE.*
+- *Format: YYYY-MM-DD*
+
+**Example:**
+```sql
+dob DATE
+```
+
+###### **TIME**
+
+- *Stores only TIME.*
+- *Format: HH:MM:SS*
+
+###### **DATETIME**
 
  #### **Basic SQL commands**
  *SQL commands are used to interact with the database. There are 5 types of SQL commands. They are:*
