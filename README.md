@@ -49,7 +49,7 @@ Hey everybody!!!
     - [**TIMESTAMP**](#timestamp)
   - [**Boolean**](#boolean)
   - [**Enum**](#enum)
-- [**Basic SQL commands**](#basic-sql-commands)
+- [**SQL commands**](#sql-commands)
 - [**DDL**](#ddl)
   - [**CREATE**](#create)
   - [**ALTER**](#alter)
@@ -459,7 +459,10 @@ is_active BOOLEAN
 ```sql
 gender ENUM('Male','Female')
 ```
- #### **Basic SQL commands**
+
+---
+
+#### **SQL commands**
  *SQL commands are used to interact with the database. There are 5 types of SQL commands. They are:*
  - *DDL - CREATE, ALTER, DROP, TRUNCATE*
  - *DML - INSERT, UPDATE, DELETE*
