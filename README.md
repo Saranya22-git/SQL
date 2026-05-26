@@ -7,7 +7,7 @@ Hey everybody!!!
 - [**Introduction to Databases**](#introduction-to-databases)
   - [**Data**](#data)
   - [**Database**](#database)
-    - [**Why do we need database?**](#why-do-we-need-database)
+  - [**Why do we need database?**](#why-do-we-need-database)
   - [**What is DBMS?**](#what-is-dbms)
   - [**What is RDBMS?**](#what-is-rdbms)
   - [**DBMS** vs **RDMS**](#dbms-vs-rdms)
@@ -52,7 +52,7 @@ Hey everybody!!!
   - [**DDL**](#ddl)
     - [**DDL Commands**](#ddl-commands)
       - [**CREATE**](#create)
-    - [**ALTER**](#alter)
+      - [**ALTER**](#alter)
     - [**TRUNCATE**](#truncate)
     - [**DROP**](#drop)
   - [**DML**](#dml)
@@ -143,7 +143,7 @@ Hey everybody!!!
 
 **Example for database:** *College stores student details, marks, attendance. All this is stored in a database.*
 
-##### **Why do we need database?**
+#### **Why do we need database?**
 
 **🔹*Without database:*** *Data is stored in files, difficult to search, data duplication, no security with database.*
 
@@ -490,23 +490,28 @@ gender ENUM('Male','Female')
 
 
 ###### **CREATE**
-*Used to CREATE a new table or database.*
+
+*Used to CREATE a new tables or databases.*
+
 ```sql
--- Syntax
+- Syntax for creating a database
+CREATE DATABASE database_name;
+
+- Example
+CREATE DATABASE myfirst_db;
+```
+
+```sql
+-- Syntax for creating a table
 CREATE TABLE table_name(
     column1 datatype constraint,
     column2 datatype constraint
 );
 
 --Example
-CREATE TABLE student_details(
-    id INT PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
-    age INT CHECK(age>=18),
-    loc VARCHAR(50) DEFAULT "hyd"
-);
+CREATE TABLE grocery
 ```
-##### **ALTER**
+###### **ALTER**
 *Used to modify an existing table structure.*
 ```sql
 -- Syntax for ADD COLUMN
@@ -528,6 +533,10 @@ MODIFY name VRACHAR(100);
 -- Syntax for DROP COLUMN
 ALTER TABLE table_name
 DROP COLUMN column_name
+
+SHOW DATABASES;
+SHOW TABLES;
+DROP TABLE grocery;
 
 -- Example
 ALTER TABLE student_details
