@@ -191,12 +191,12 @@ Hey everybody!!!
 *Data is stored in JSON, documents, key-value pairs.*
 
    **Example:** *MongoDB*
-    ```json
+  ```json
        {
           "name":"sara",
           "marks":89
        }
-     ```
+  ```
 
 ---
 
